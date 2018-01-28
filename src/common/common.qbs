@@ -3,6 +3,12 @@ import qbs 1.0
 Product {
 	type: "staticlibrary"
 	name: "common"
+
+	FileTagger {
+		patterns: "StdAfx.h"
+		fileTags: ["cpp_pch_src"]
+	}
+
 	files: [
 		"diagnostics/graph.cpp",
 		"gl/gl_check.cpp",

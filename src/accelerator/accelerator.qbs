@@ -3,6 +3,12 @@ import qbs 1.0
 Product {
 	type: "staticlibrary"
 	name: "accelerator"
+
+	FileTagger {
+		patterns: "StdAfx.h"
+		fileTags: ["cpp_pch_src"]
+	}
+
 	files: [
 		"ogl/image/image_kernel.cpp",
 		"ogl/image/image_mixer.cpp",

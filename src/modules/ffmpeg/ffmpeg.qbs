@@ -3,6 +3,12 @@ import qbs 1.0
 Product {
 	type: "staticlibrary"
 	name: "casparcg_module_ffmpeg"
+
+	FileTagger {
+		patterns: "StdAfx.h"
+		fileTags: ["cpp_pch_src"]
+	}
+
 	files: [
 		"consumer/ffmpeg_consumer.cpp",
 		"producer/audio/audio_decoder.cpp",

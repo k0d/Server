@@ -3,6 +3,12 @@ import qbs 1.0
 Product {
 	type: "staticlibrary"
 	name: "core"
+
+	FileTagger {
+		patterns: "StdAfx.h"
+		fileTags: ["cpp_pch_src"]
+	}
+
 	files: [
 		"consumer/syncto/syncto_consumer.cpp",
 		"consumer/frame_consumer.cpp",

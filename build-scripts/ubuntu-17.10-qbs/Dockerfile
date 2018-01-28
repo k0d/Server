@@ -4,6 +4,7 @@ RUN set -ex; \
 	apt-get update; \
 	apt-get install -y --no-install-recommends \
 		libavdevice-dev \
+		libboost-all-dev \
 		libfreeimage-dev \
 		libglew-dev \
 		libopenal-dev \
@@ -39,13 +40,13 @@ RUN qbs setup-toolchains --detect \
 RUN rm -rf /tmp/qbs*
 
 ## Build libboost
-WORKDIR /tmp
-RUN wget https://dl.bintray.com/boostorg/release/1.66.0/source/boost_1_66_0.tar.gz
-RUN tar zxvf boost_1_66_0.tar.gz
-WORKDIR /tmp/boost_1_66_0
-RUN ./bootstrap.sh --prefix=/usr/local
-RUN ./b2 --with=all -j8 install || exit 0
-RUN rm -rf /tmp/boost*
+#WORKDIR /tmp
+#RUN wget https://dl.bintray.com/boostorg/release/1.66.0/source/boost_1_66_0.tar.gz
+#RUN tar zxvf boost_1_66_0.tar.gz
+#WORKDIR /tmp/boost_1_66_0
+#RUN ./bootstrap.sh --prefix=/usr/local
+#RUN ./b2 --with=all -j8 install || exit 0
+#RUN rm -rf /tmp/boost*
 
 COPY files/RxCpp/include/ /usr/local/include/
 

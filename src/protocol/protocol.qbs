@@ -3,6 +3,12 @@ import qbs 1.0
 Product {
 	type: "staticlibrary"
 	name: "protocol"
+
+	FileTagger {
+		patterns: "StdAfx.h"
+		fileTags: ["cpp_pch_src"]
+	}
+
 	files: [
 		"amcp/AMCPCommandQueue.cpp",
 		"amcp/AMCPCommandsImpl.cpp",

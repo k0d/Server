@@ -2,6 +2,12 @@ import qbs 1.0
 
 CppApplication {
 	name: "casparcg_server"
+
+	FileTagger {
+		patterns: "StdAfx.h"
+		fileTags: ["cpp_pch_src"]
+	}
+
 	files: [
 		"linux_specific.cpp",
 		"casparcg.config",
