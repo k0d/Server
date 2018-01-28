@@ -1,9 +1,2 @@
-/version.h
-/shell/included_modules.h
-
-/build
-/products
-
-CMakeLists.txt.user
-.settings
 .vscode
+products/
