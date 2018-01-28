@@ -2,7 +2,7 @@ import qbs 1.0
 
 Product {
 	type: "staticlibrary"
-	name: "common"
+	name: "casparcg_common"
 
 	FileTagger {
 		patterns: "StdAfx.h"

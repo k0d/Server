@@ -21,10 +21,10 @@ CppApplication {
 		"server.h",
 		"stdafx.h",
 	]
-	Depends { name: "accelerator" }
-	Depends { name: "common" }
-	Depends { name: "core" }
-	Depends { name: "protocol" }
+	Depends { name: "casparcg_accelerator" }
+	Depends { name: "casparcg_common" }
+	Depends { name: "casparcg_core" }
+	Depends { name: "casparcg_protocol" }
 //	Depends { name: "casparcg_modules" }
 
 	Depends { name: "casparcg_module_decklink" }

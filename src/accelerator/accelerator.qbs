@@ -2,7 +2,7 @@ import qbs 1.0
 
 Product {
 	type: "staticlibrary"
-	name: "accelerator"
+	name: "casparcg_accelerator"
 
 	FileTagger {
 		patterns: "StdAfx.h"
@@ -31,8 +31,8 @@ Product {
 		"StdAfx.h",
 	]
 	Depends { name: 'cpp' }
-	Depends { name: "common" }
-	Depends { name: "core" }
+	Depends { name: "casparcg_common" }
+	Depends { name: "casparcg_core" }
 	cpp.cxxLanguageVersion: 'c++14'
 	cpp.warningLevel: 'none'
 	cpp.cxxFlags: ['-msse3', '-mssse3', '-msse4.1', '-fnon-call-exceptions']

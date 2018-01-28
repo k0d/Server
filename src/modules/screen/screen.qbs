@@ -10,8 +10,8 @@ Product {
 		'screen.h',
 	]
 	Depends { name: 'cpp' }
-	Depends { name: "common" }
-	Depends { name: "core" }
+	Depends { name: "casparcg_common" }
+	Depends { name: "casparcg_core" }
 	Depends { name: "casparcg_module_ffmpeg" }
 	cpp.cxxLanguageVersion: 'c++14'
 	cpp.warningLevel: 'none'

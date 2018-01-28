@@ -2,7 +2,7 @@ import qbs 1.0
 
 Product {
 	type: "staticlibrary"
-	name: "core"
+	name: "casparcg_core"
 
 	FileTagger {
 		patterns: "StdAfx.h"
@@ -114,7 +114,7 @@ Product {
 		"video_format.h",
 	]
 	Depends { name: 'cpp' }
-	Depends { name: "common" }
+	Depends { name: "casparcg_common" }
 	cpp.cxxLanguageVersion: 'c++14'
 	cpp.warningLevel: 'none'
 	cpp.cxxFlags: ['-msse3', '-mssse3', '-msse4.1', '-fnon-call-exceptions']
